@@ -18,3 +18,6 @@ export LANG=en_US.UTF-8
 
 # Dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
+# Pywal, apply theme
+(cat ~/.cache/wal/sequences &)
