@@ -125,3 +125,14 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 alt + ctrl + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+
+
+
+
+
+
+# lock screen
+super + l
+	xsecurelock

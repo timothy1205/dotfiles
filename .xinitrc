@@ -17,5 +17,8 @@ xsetroot -cursor_name left_ptr &
 # fn key overrides
 xbindkeys &
 
+# Java hack to make applications work with tiling wms
+~/.local/java_nonreparenting_wm_hack.sh & 
+
 # Launch wm
 exec bspwm
