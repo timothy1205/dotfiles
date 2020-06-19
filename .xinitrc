@@ -1,5 +1,18 @@
+
+# Enable numpad
+numlock &
+
+# xrandr 
 ~/.screenlayout/desktop.sh &
+
+# Redshift coloring
 redshift &
-xset s off -dpms
-xsetroot -cursor_name left_ptr
+
+# Disable screensaver/screen blanking  
+xset s off -dpms &
+
+# Set default cursor
+xsetroot -cursor_name left_ptr &
+
+# Launch wm
 exec bspwm
