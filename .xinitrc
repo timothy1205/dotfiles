@@ -14,5 +14,8 @@ xset s off -dpms &
 # Set default cursor
 xsetroot -cursor_name left_ptr &
 
+# fn key overrides
+xbindkeys &
+
 # Launch wm
 exec bspwm
