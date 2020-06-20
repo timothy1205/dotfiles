@@ -399,7 +399,7 @@ margin-bottom = 5
 [module/spotify]
 type = custom/script
 interval = 1
-format-prefix = " "
+ormat-prefix = " "
 format = <label>
-exec = python $HOME/.config/polybar/spotify_status.py -f '{play_pause} {artist}: {song}'
+exec = python $HOME/.config/polybar/spotify_status.py -f '{play_pause} {artist}: {song}' -t 30
 format-underline = #1db954
