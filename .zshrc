@@ -21,3 +21,6 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Pywal, apply theme
 (cat ~/.cache/wal/sequences &)
+
+# Intellij product fix
+alias clion='clion_fix'

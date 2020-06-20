@@ -42,4 +42,3 @@ bspc config borderless_monocle 	true
 bspc config gapless_monocle    	true
 
 exec --no-startup-id ~/.screenlayout/desktop.sh
-
