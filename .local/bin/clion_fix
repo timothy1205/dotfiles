@@ -1,4 +1,0 @@
-#!/bin/sh
-
-$HOME/.local/share/java_nonreparenting_wm_hack.sh
-"/home/timothy/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/201.7846.88/bin/clion.sh" "$@"
