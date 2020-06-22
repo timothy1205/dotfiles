@@ -1,0 +1,60 @@
+* {
+	background: rgba(0,0,0, 60%);
+	highlight: #9E2C08;
+	orange: #E06023;
+	background-color: rgba ( 0, 0, 0, 0 % );
+	font: "Hack 10";	
+}
+
+#window {
+	transparency: "real";
+	background-color: @background;
+	border: 0;
+	padding: 5px;
+}
+
+#mainbox {
+	border: 0;
+	padding: 0;
+}
+
+#inputbar {
+	text-color: @orange;
+	font: "Hack 20";
+	children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+#textbox-prompt-colon {
+	expand: false;
+	str: ":";
+	margin: 0 5px 0 0;
+	text-color: @orange;
+}
+
+#case-indicator {
+	text-font: inherit;
+	text-color: inherit;
+}
+
+#prompt {
+	text-color: @orange;
+	padding-right: 10px;	
+}
+
+#entry {
+	text-color: @highlight;
+}
+
+
+#element {
+	border: 0;
+	padding: 2px;
+	text-color: @highlight;
+	background-color: transparent;
+}
+
+#element.selected {
+	background-color: @highlight;
+	text-color: black;
+	highlight: bold;
+}
