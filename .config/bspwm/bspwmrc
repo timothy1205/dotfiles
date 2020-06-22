@@ -7,10 +7,12 @@ killall sxhkd
 killall dunst
 killall polybar
 killall wal
+killall picmon
 
 sxhkd &
 dunst &
 wal -i $WALLPAPER &
+picom &
 
 bspc config top_padding 	0
 
