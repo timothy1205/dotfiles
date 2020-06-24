@@ -86,7 +86,7 @@ alt + {o,i}
 super + {_,shift + }{1-9,0} 
 	bspc {desktop -f,node -d} 'any.focused:^{1-9,10}'
 
-alt + {Up,Right,Down,Left}
+super + {Up,Right,Down,Left}
 	bspc node -s {north,east,south,west} --follow
 
 #
