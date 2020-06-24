@@ -20,9 +20,9 @@ if [[ $(hostname) == 'arch' ]]; then
 	# Left
 	bspc monitor DisplayPort-2 -d 1 2 3
 	# Right
-	bspc monitor DisplayPort-0 -d 4 5 6
+	bspc monitor DisplayPort-0 -d 1 2 3
 	# Top
-	bspc monitor DisplayPort-1 -d 7 8 9
+	bspc monitor DisplayPort-1 -d 1 2 3
 
 	# Polybar spacing
 	bspc config -m DisplayPort-2 top_padding	38
