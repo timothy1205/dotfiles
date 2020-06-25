@@ -24,3 +24,7 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Java hack
 $HOME/.local/share/java_nonreparenting_wm_hack.sh
+
+# Defualt editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
