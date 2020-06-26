@@ -8,11 +8,15 @@ killall dunst
 killall polybar
 killall wal
 killall picmon
+killall redshift
 
 sxhkd &
 dunst &
 wal -i $WALLPAPER &
 picom &
+redshift &
+xset s off -dpms &
+xsetroot -cursor_name left_ptr &
 
 bspc config top_padding 	0
 
