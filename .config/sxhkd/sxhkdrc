@@ -140,3 +140,12 @@ alt + ctrl + {Left,Down,Up,Right}
 # lock screen
 super + l
 	xsecurelock
+
+
+
+# spotify
+super + p
+	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+super + {_,shift +}o
+	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
