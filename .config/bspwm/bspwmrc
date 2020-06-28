@@ -20,6 +20,7 @@ xsetroot -cursor_name left_ptr &
 
 bspc config top_padding 	0
 
+# Note: hostname command requires 'inetutils' package
 if [[ $(hostname) == 'arch' ]]; then
 	# Left
 	bspc monitor DisplayPort-2 -d 1 2 3
