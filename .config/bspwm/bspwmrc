@@ -20,6 +20,7 @@ killall redshift
 sxhkd &
 dunst &
 wal -i "$WALLPAPER"
+pywalfox update &
 picom &
 redshift &
 xset s off -dpms &
