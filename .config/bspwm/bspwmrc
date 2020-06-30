@@ -2,17 +2,24 @@
 
 export WALLPAPER="$HOME/.config/bspwm/wallpapers/space-orange.jpg"
 
+# Monitors
+export MONITOR_LEFT="DisplayPort-5"
+export MONITOR_TOP="DisplayPort-4"
+export MONITOR_RIGHT="DisplaPort-3"
+
+
+
 # Kill previous processes
 killall sxhkd
 killall dunst
 killall polybar
 killall wal
-killall picmon
+killall picom
 killall redshift
 
 sxhkd &
 dunst &
-wal -i $WALLPAPER &
+wal -i "$WALLPAPER"
 picom &
 redshift &
 xset s off -dpms &
@@ -23,15 +30,15 @@ bspc config top_padding 	0
 # Note: hostname command requires 'inetutils' package
 if [[ $(hostname) == 'arch' ]]; then
 	# Left
-	bspc monitor DisplayPort-2 -d 1 2 3
+	bspc monitor $MONITOR_LEFT -d 1 2 3
 	# Right
-	bspc monitor DisplayPort-0 -d 1 2 3
+	bspc monitor $MONITOR_RIGHT -d 1 2 3
 	# Top
-	bspc monitor DisplayPort-1 -d 1 2 3
+	bspc monitor $MONITOR_TOP -d 1 2 3
 
 	# Polybar spacing
-	bspc config -m DisplayPort-2 top_padding	38
-	export MONITOR="DisplayPort-2"
+	bspc config -m $MONITOR_LEFT top_padding	38
+	export MONITOR=$MONITOR_LEFT
 fi
 
 polybar windowtitle &

@@ -28,3 +28,4 @@ $HOME/.local/share/java_nonreparenting_wm_hack.sh
 # Defualt editor
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
