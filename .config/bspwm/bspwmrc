@@ -3,9 +3,9 @@
 export WALLPAPER="$HOME/.config/bspwm/wallpapers/space-orange.jpg"
 
 # Monitors
-export MONITOR_LEFT="DisplayPort-5"
-export MONITOR_TOP="DisplayPort-4"
-export MONITOR_RIGHT="DisplayPort-3"
+export MONITOR_LEFT="DisplayPort-2"
+export MONITOR_TOP="DisplayPort-1"
+export MONITOR_RIGHT="DisplayPort-0"
 
 
 
