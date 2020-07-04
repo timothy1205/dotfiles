@@ -3,5 +3,6 @@
 numlockx &
 
 # xrandr 
-/home/timothy/.screenlayout/desktop.sh &
+/home/timothy/.screenlayout/desktop.sh
+
 
