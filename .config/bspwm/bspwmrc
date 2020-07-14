@@ -20,7 +20,6 @@ killall redshift
 sxhkd &
 dunst &
 wal -i "$WALLPAPER"
-pywalfox update &
 picom &
 redshift &
 xset s off -dpms &
@@ -41,7 +40,7 @@ if [[ $(hostname) == 'arch' ]]; then
 	# Polybar spacing
 	bspc config -m $MONITOR_LEFT top_padding 38
 	export MONITOR=$MONITOR_LEFT
-else if [[ $(hostname) == 'arch-laptop' ]]; then
+elif [[ $(hostname) == 'arch-laptop' ]]; then
 	export MONITOR='eDP1'
 
 	bspc config -m $MONITOR top_padding 38
