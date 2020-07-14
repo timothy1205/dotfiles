@@ -12,11 +12,9 @@ alert = #bd2c40i
 offset-y = 8
 font-0 = Hack:style=Regular:pixelsize=12;4
 
-[bar/windowtitle]
+[defaults]
 monitor = ${env:MONITOR:}
-width = 20%
 height = 30
-offset-x = 40%
 offset-y = ${custom.offset-y}
 radius = 10.0
 
@@ -26,32 +24,35 @@ background = ${colors.background}
 foreground = ${colors.foreground}
 
 font-0 = ${custom.font-0}
+
+wm-restack = bspwm
+
+
+[bar/wm]
+inherit = defaults
+width = 5.32%
+offset-x = 8
+
+modules-left = bspwm
+
+
+[bar/windowtitle]
+inherit = defaults
+width = 20%
+offset-x = 40%
 
 modules-center = icon xwindow
 fixed-center = true
 
-wm-restack = bspwm
-
 [bar/info]
-monitor = ${env:MONITOR:}
+inherits = defaults
 width = 30%
-height = 30
 offset-x = 70%:-5
-offset-y = ${custom.offset-y}
-radius = 10.0
-
-override-redirect = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
 padding-right = 1
-
-font-0 = ${custom.font-0}
 
 modules-right = pulseaudio spotify cpu date
 module-margin = 1
 
-wm-restack = bspwm
 
 [module/xwindow]
 type = internal/xwindow
