@@ -42,6 +42,8 @@ if [[ $(hostname) == 'arch' ]]; then
 	export MONITOR=$MONITOR_LEFT
 elif [[ $(hostname) == 'arch-laptop' ]]; then
 	export MONITOR='eDP1'
+	
+	bspc monitor $MONITOR -d 1 2 3
 
 	bspc config -m $MONITOR top_padding 38
 fi
