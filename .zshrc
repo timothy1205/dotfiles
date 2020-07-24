@@ -36,3 +36,5 @@ $HOME/.local/share/java_nonreparenting_wm_hack.sh
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
+# Qt Kvantum theme
+export QT_STYLE_OVERRIDE=kvantum
