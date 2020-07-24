@@ -36,6 +36,7 @@ offset-x = 8
 modules-left = bspwm
 
 
+
 [bar/windowtitle]
 inherit = defaults
 width = 20%
@@ -46,11 +47,12 @@ fixed-center = true
 
 [bar/info]
 inherits = defaults
-width = 32%
-offset-x = 68%:-5
+width = 34.5%
+offset-x = 66.5%:-8
 padding-right = 1
 
 modules-right = pulseaudio spotify netspeed cpu date
+tray-position = right
 module-margin = 1
 
 
