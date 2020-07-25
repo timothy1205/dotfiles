@@ -42,10 +42,10 @@ if [[ $(hostname) == 'arch' ]]; then
 	export MONITOR=$MONITOR_LEFT
 fi
 
-polybar wm &
+polybar --reload wm &
 #polybar sound &
-polybar windowtitle &
-polybar info &
+polybar --reload windowtitle &
+polybar --reload info &
 
 bspc config border_width        0
 bspc config window_gap		8
