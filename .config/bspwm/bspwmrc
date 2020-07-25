@@ -40,12 +40,6 @@ if [[ $(hostname) == 'arch' ]]; then
 	# Polybar spacing
 	bspc config -m $MONITOR_LEFT top_padding 38
 	export MONITOR=$MONITOR_LEFT
-elif [[ $(hostname) == 'arch-laptop' ]]; then
-	export MONITOR='eDP1'
-	
-	bspc monitor $MONITOR -d 1 2 3
-
-	bspc config -m $MONITOR top_padding 38
 fi
 
 polybar wm &
