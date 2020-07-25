@@ -48,7 +48,7 @@ fixed-center = true
 [bar/info]
 inherits = defaults
 width = 34.5%
-offset-x = 66.5%:-8
+offset-x = 65.5%:-8
 padding-right = 1
 
 modules-right = pulseaudio spotify netspeed cpu date
