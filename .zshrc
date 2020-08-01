@@ -3,7 +3,7 @@ export ZSH=/usr/share/oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+plugins=(git docker docker-compose)
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -30,7 +30,10 @@ alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 (cat ~/.cache/wal/sequences &)
 
 # Java hack
-$HOME/.local/share/java_nonreparenting_wm_hack.sh
+if  xset -q &>/dev/null; then
+  # Check that an xserver is active
+  $HOME/.local/share/java_nonreparenting_wm_hack.sh
+fi
 
 # Defualt editor
 export VISUAL=vim
@@ -38,3 +41,5 @@ export EDITOR="$VISUAL"
 
 # Qt Kvantum theme
 export QT_STYLE_OVERRIDE=kvantum
+
+alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
