@@ -39,7 +39,4 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 
-# Qt Kvantum theme
-export QT_STYLE_OVERRIDE=kvantum
-
 alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"

@@ -7,7 +7,8 @@ export MONITOR_LEFT="DisplayPort-2"
 export MONITOR_TOP="DisplayPort-1"
 export MONITOR_RIGHT="DisplayPort-0"
 
-
+# Qt Kvantum theme
+export QT_STYLE_OVERRIDE=kvantum
 
 # Kill previous processes
 killall sxhkd
