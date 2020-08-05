@@ -17,12 +17,15 @@ killall polybar
 killall wal
 killall picom
 killall redshift
+killall nm-applet
 
 sxhkd &
 dunst &
 wal -i "$WALLPAPER"
 picom &
 redshift &
+nm-applet &
+
 xset s off -dpms &
 xsetroot -cursor_name left_ptr &
 xrdb $HOME/.Xresources & 
