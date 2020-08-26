@@ -49,9 +49,9 @@ fixed-center = true
 inherits = defaults
 width = 34.5%
 offset-x = 65.5%:-8
-padding-right = 1
+;padding-right = 1
 
-modules-right = pulseaudio spotify netspeed cpu date
+modules-right = pulseaudio spotify cpu date
 tray-position = right
 module-margin = 1
 
@@ -404,7 +404,7 @@ type = custom/script
 interval = 1
 ;format-prefix = 
 format = <label>
-exec = python $HOME/.config/polybar/spotify_status.py -f '{artist}: {song}' -t 30
+exec = python $HOME/.config/polybar/spotify_status.py -f '{artist}: {song}' -t 24
 format-underline = #1db954
 
 [module/netspeed]
