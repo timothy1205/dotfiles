@@ -51,7 +51,7 @@ polybar --reload wm &
 polybar --reload windowtitle &
 polybar --reload info &
 
-bspc config border_width        0
+bspc config border_width        1
 bspc config window_gap		8
 
 bspc config right_padding 	0
@@ -62,3 +62,6 @@ bspc config split_ratio       	0.50
 bspc config borderless_monocle 	true
 bspc config gapless_monocle    	true
 
+bspc config focused_border_color "#c73D0E"
+bspc config active_border_color "#000000"
+bspc config normal_border_color "#000000"
