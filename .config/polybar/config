@@ -398,7 +398,7 @@ type = custom/script
 interval = 1
 ;format-prefix = 
 format = <label>
-exec = python $HOME/.config/polybar/spotify_status.py -f '{artist}: {song}' -t 24
+exec = python $HOME/.config/polybar/spotify_status.py -f '{song}' -t 24
 format-underline = #1db954
 
 [module/netspeed]
