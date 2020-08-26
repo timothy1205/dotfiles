@@ -1,0 +1,7 @@
+#!/usr/bin/python
+
+import toml
+import os 
+
+if os.path.isfile("./.replit"):
+  os.system(toml.load("./.replit")["run"])
