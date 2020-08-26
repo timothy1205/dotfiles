@@ -121,7 +121,8 @@ try:
     album = fix_string(metadata['xesam:album']) if metadata['xesam:album'] else ''
 
     if (quiet and status == 'Paused') or (not artist and not song and not album):
-        print(' ' * (args.trunclen or trunclen))
+        print('')
+        #print(' ' * (args.trunclen or trunclen))
     else:
         if font:
             artist = label_with_font.format(font=font, label=artist)
@@ -135,6 +136,7 @@ try:
                                      album=album), trunclen + 4))
 except Exception as e:
     if isinstance(e, dbus.exceptions.DBusException):
-        print(' ' * (args.trunclen or trunclen))
+        print('')
+        #print(' ' * (args.trunclen or trunclen))
     else:
         print(e)

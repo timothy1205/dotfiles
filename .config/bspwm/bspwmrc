@@ -43,13 +43,11 @@ if [[ $(hostname) == 'arch' ]]; then
 
 	# Polybar spacing
 	bspc config -m $MONITOR_LEFT top_padding 38
-	export MONITOR=$MONITOR_LEFT
+        bspc config -m $MONITOR_TOP top_padding 25
 fi
 
-polybar --reload wm &
-#polybar sound &
-polybar --reload windowtitle &
-polybar --reload info &
+MONITOR=$MONITOR_LEFT polybar --reload bar &
+MONITOR=$MONITOR_TOP polybar --reload simple &
 
 bspc config border_width        1
 bspc config window_gap		8
