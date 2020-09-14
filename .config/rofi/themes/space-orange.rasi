@@ -18,6 +18,10 @@
 	padding: 0;
 }
 
+#textbox {
+        text-color: @highlight;
+}
+
 #inputbar {
 	text-color: @orange;
 	font: "Hack 20";
@@ -58,3 +62,4 @@
 	text-color: black;
 	highlight: bold;
 }
+
