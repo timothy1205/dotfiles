@@ -3,3 +3,5 @@
 	email = timothy120500@gmail.com
 [pull]
 	rebase = false
+[color]
+	ui = auto
