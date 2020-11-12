@@ -3,9 +3,9 @@
 export WALLPAPER="$HOME/.config/bspwm/wallpapers/space-orange.jpg"
 
 # Monitors
-export MONITOR_LEFT="DisplayPort-2"
-export MONITOR_TOP="DisplayPort-1"
-export MONITOR_RIGHT="DisplayPort-0"
+export MONITOR_LEFT="DisplayPort-0"
+export MONITOR_MIDDLE="HDMI-A-0"
+export MONITOR_RIGHT="DisplayPort-2"
 
 # Qt Kvantum theme
 export QT_STYLE_OVERRIDE=kvantum
@@ -36,18 +36,22 @@ bspc config top_padding 	0
 if [[ $(hostname) == 'arch' ]]; then
 	# Left
 	bspc monitor $MONITOR_LEFT -d 1 2 3
-	# Right
+	
+        # Middle
+	bspc monitor $MONITOR_MIDDLE -d 1 2 3
+       
+        # Right
 	bspc monitor $MONITOR_RIGHT -d 1 2 3
-	# Top
-	bspc monitor $MONITOR_TOP -d 1 2 3
 
 	# Polybar spacing
-	bspc config -m $MONITOR_LEFT top_padding 38
-        bspc config -m $MONITOR_TOP top_padding 25
+	bspc config -m $MONITOR_LEFT top_padding 25
+	bspc config -m $MONITOR_MIDDLE top_padding 38
+	bspc config -m $MONITOR_RIGHT top_padding 25
 fi
 
-MONITOR=$MONITOR_LEFT polybar --reload bar &
-MONITOR=$MONITOR_TOP polybar --reload simple &
+MONITOR=$MONITOR_LEFT polybar --reload simple &
+MONITOR=$MONITOR_MIDDLE polybar --reload bar &
+MONITOR=$MONITOR_RIGHT polybar --reload simple &
 
 bspc config border_width        1
 bspc config window_gap		8
