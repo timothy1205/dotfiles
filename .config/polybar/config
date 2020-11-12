@@ -339,18 +339,15 @@ thermal-zone = 0
 warn-temperature = 60
 hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp2_input
 
-format = <ramp> <label>
+format = <label>
 format-underline = #f50a4d
-format-warn = <ramp> <label-warn>
+format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
 label-warn = %temperature-c%
 label-warn-foreground = ${colors.secondary}
 
-ramp-0 = 
-ramp-1 = 
-ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
 
 [module/powermenu]
