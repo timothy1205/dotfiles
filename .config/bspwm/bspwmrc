@@ -3,9 +3,17 @@
 export WALLPAPER="$HOME/.config/bspwm/wallpapers/space-orange.jpg"
 
 # Monitors
-export MONITOR_LEFT="DisplayPort-0"
-export MONITOR_MIDDLE="HDMI-A-0"
-export MONITOR_RIGHT="DisplayPort-2"
+
+if xrandr --listactivemonitors | grep DisplayPort
+then
+  export MONITOR_LEFT="DisplayPort-0"
+  export MONITOR_MIDDLE="HDMI-A-0"
+  export MONITOR_RIGHT="DisplayPort-2"
+else
+  export MONITOR_LEFT="DP-1"
+  export MONITOR_MIDDLE="HDMI-1"
+  export MONITOR_RIGHT="DP-3"
+fi
 
 # Qt Kvantum theme
 export QT_STYLE_OVERRIDE=kvantum
