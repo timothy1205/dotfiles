@@ -135,7 +135,7 @@ alt + ctrl + {Left,Down,Up,Right}
 
 # lock screen
 super + l
-	xsecurelock
+	xlock
 
 
 
