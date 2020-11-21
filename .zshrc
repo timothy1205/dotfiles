@@ -45,4 +45,4 @@ alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse
 alias ise='/usr/bin/sh -c "unset LANG && unset QT_PLUGIN_PATH && source /opt/Xilinx/14.7/ISE_DS/settings64.sh && ise"'
 
 # Cat fork w/ syntax highlighting
-alias cat='bat'
+alias cat='bat -pP'
