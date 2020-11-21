@@ -1,3 +1,15 @@
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'ycm-core/YouCompleteMe'
+
+call vundle#end()
+filetype plugin indent on
+
+
 set number	
 set linebreak	
 set showbreak=+++
@@ -22,3 +34,6 @@ set undolevels=1000
 set backspace=indent,eol,start
 
 syntax on
+
+let g:ycm_clangd_uses_ycmd_caching = 0
+let g:ycm_clangd_binary_path = exepath("clangd")
