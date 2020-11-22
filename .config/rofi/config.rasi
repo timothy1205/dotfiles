@@ -1,4 +1,4 @@
 configuration {
 	width: 40;
-	theme: "~/.config/rofi/themes/space-orange.rasi";
+	theme: "~/.config/rofi/themes/space3.rasi";
 }

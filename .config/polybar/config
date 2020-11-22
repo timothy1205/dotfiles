@@ -2,9 +2,9 @@
 background = #1a1a1a
 ;background = #aa1a1a1a
 background-alt = #333
-foreground = #c73D0E
+foreground = #913852
 foreground-alt = #FFF
-primary = #ffb52a
+primary = #C75477
 secondary = #e60053
 alert = #bd2c40i
 
