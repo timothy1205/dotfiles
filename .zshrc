@@ -46,3 +46,5 @@ alias ise='/usr/bin/sh -c "unset LANG && unset QT_PLUGIN_PATH && source /opt/Xil
 
 # Cat fork w/ syntax highlighting
 alias cat='bat -pP'
+
+alias neofetch='neofetch --disable wm'
