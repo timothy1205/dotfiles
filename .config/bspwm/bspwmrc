@@ -29,16 +29,16 @@ xrdb $HOME/.Xresources &
 
 bspc config top_padding 	0
 
-export MONITOR=''
+export MONITOR='eDP1'
 
 # Note: hostname command requires 'inetutils' package
 if [[ $(hostname) == 'archtop' ]]; then
-	bspc monitor $MONITOR -d 1 2 3 4 5
+	bspc monitor $MONITOR -d 1 2 3 4 5 6 7 8 9
 	
 	bspc config -m $MONITOR top_padding 25
 fi
 
-MONITOR=$MONITOR_LEFT polybar --reload simple &
+polybar --reload simple &
 
 bspc config border_width        1
 bspc config window_gap		8
