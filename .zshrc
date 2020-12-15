@@ -48,3 +48,6 @@ alias ise='/usr/bin/sh -c "unset LANG && unset QT_PLUGIN_PATH && source /opt/Xil
 alias cat='bat -pP'
 
 alias neofetch='neofetch --disable wm'
+
+alias airplane-on='sudo rfkill block all'
+alias airplane-off='sudo rfkill unblock all'
