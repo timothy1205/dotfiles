@@ -51,3 +51,5 @@ alias neofetch='neofetch --disable wm'
 
 alias airplane-on='sudo rfkill block all'
 alias airplane-off='sudo rfkill unblock all'
+
+alias cninja='cmake -G Ninja'
