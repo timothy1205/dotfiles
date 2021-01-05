@@ -145,3 +145,7 @@ super + p
 
 super + {_,shift +}o
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
+
+super + {_,shift +}v
+	virsh {start,shutdown} w10
+
