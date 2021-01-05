@@ -50,3 +50,12 @@ alias cat='bat -pP'
 alias neofetch='neofetch --disable wm'
 
 alias cninja='cmake -G Ninja'
+
+function trizen () {
+  if [ $# -eq 0 ]
+  then
+    /usr/bin/trizen -Syu
+  else
+    /usr/bin/trizen "$@"
+  fi
+}
