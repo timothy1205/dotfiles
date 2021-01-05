@@ -54,3 +54,12 @@ alias airplane-on='sudo rfkill block all'
 alias airplane-off='sudo rfkill unblock all'
 
 alias cninja='cmake -G Ninja'
+
+function trizen () {
+  if [ $# -eq 0 ]
+  then
+    /usr/bin/trizen -Syu
+  else
+    /usr/bin/trizen "$@"
+  fi
+}
