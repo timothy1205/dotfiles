@@ -1,0 +1,11 @@
+[Unit]
+Description=Scream pulse reciever
+After=pulseaudio.service
+Wants=pulseaudio.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/scream -o pulse -i virbr0
+
+[Install]
+WantedBy=default.target
