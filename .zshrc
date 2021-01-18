@@ -42,9 +42,6 @@ export EDITOR="$VISUAL"
 
 alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
-# Xilinx ISE
-alias ise='/usr/bin/sh -c "unset LANG && unset QT_PLUGIN_PATH && source /opt/Xilinx/14.7/ISE_DS/settings64.sh && ise"'
-
 # Cat fork w/ syntax highlighting
 alias cat='bat -pP'
 
