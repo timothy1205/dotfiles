@@ -3,7 +3,7 @@ export ZSH=/usr/share/oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git docker docker-compose)
+plugins=(git docker docker-compose history yarn vundle thefuck)
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
@@ -63,3 +63,5 @@ function trizen () {
     /usr/bin/trizen "$@"
   fi
 }
+
+export THEFUCK_EXCLUDE_RULES='fix_file'
