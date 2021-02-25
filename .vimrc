@@ -50,7 +50,11 @@ set backspace=indent,eol,start
 
 syntax on
 set background=dark
+
 colorscheme Atelier_DuneDark
+" Darker background/line number background
+hi Normal ctermbg=Black
+hi LineNr ctermbg=16
 
 "control + h/j/k/l will move around the windows
 nnoremap <C-J> <C-W>j
