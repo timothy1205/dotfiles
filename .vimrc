@@ -88,8 +88,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 nmap <leader>a <Plug>(coc-codeaction)
 nmap <leader>r <Plug>(coc-rename)
-
-nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <leader>d :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
@@ -100,3 +99,5 @@ function! s:show_documentation()
     execute '!' . &keywordprg . " " . expand('<cword>')
   endif
 endfunction
+
+autocmd CursorHold * silent call CocActionAsync('highlight')
