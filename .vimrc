@@ -16,6 +16,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vhdirk/vim-cmake'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'flazz/vim-colorschemes'
 
 call vundle#end()
 filetype plugin indent on
@@ -49,7 +50,7 @@ set backspace=indent,eol,start
 
 syntax on
 set background=dark
-colorscheme afterglow
+colorscheme Atelier_DuneDark
 
 "control + h/j/k/l will move around the windows
 nnoremap <C-J> <C-W>j
