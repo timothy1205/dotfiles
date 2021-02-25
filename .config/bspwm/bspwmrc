@@ -69,8 +69,9 @@ bspc config bottom_padding 	0
 bspc config left_padding 	0
 
 bspc config split_ratio       	0.50
-bspc config borderless_monocle 	true
+bspc config borderless_monocle 	false
 bspc config gapless_monocle    	true
+bspc config single_monocle      true
 
 bspc config focused_border_color "#913852"
 bspc config active_border_color "#000000"
