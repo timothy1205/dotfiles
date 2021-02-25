@@ -38,6 +38,9 @@ set shiftwidth=2
 set smartindent	
 set smarttab	
 set softtabstop=0 
+set cmdheight=2
+
+set updatetime=300
 
 set ruler	
  
@@ -65,8 +68,6 @@ let g:rainbow_active = 1
 
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier' ]
 
-nmap <leader>d <Plug>(coc-codeaction)
-
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
   let col = col('.') - 1
@@ -80,7 +81,13 @@ inoremap <silent><expr> <Tab>
 
 nmap <silent> g[ <Plug>(coc-diagnostic-prev)
 nmap <silent> g] <Plug>(coc-diagnostic-next)
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
+nmap <leader>a <Plug>(coc-codeaction)
+nmap <leader>r <Plug>(coc-rename)
 
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
