@@ -26,6 +26,14 @@ export LANG=en_US.UTF-8
 
 # Dotfiles alias
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dfst='dotfiles status'
+alias dfa='dotfiles add'
+alias dfmsg='dotfiles commit -m'
+alias dfp='dotfiles push'
+alias dflog='dotfiles log --oneline --decorate --graph'
+alias dfsps='dotfiles show --pretty=short --show-signature'
+alias dfd='dotfiles diff'
+
 
 # Pywal, apply theme
 (cat ~/.cache/wal/sequences &)
