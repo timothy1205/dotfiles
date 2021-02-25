@@ -29,7 +29,7 @@ set textwidth=100
 set showmatch	
 set visualbell	
  
-set hlsearch	
+set hlsearch
 set smartcase	
 set ignorecase	
 set incsearch	 
@@ -67,7 +67,7 @@ map <C-n> :NERDTreeToggle<CR>
 "enable rainbow parentheses
 let g:rainbow_active = 1
 
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-spell-checker', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight' ]
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
