@@ -73,3 +73,5 @@ function trizen () {
 }
 
 export THEFUCK_EXCLUDE_RULES='fix_file'
+
+[[ -r "/usr/share/z/z.sh"  ]] && source /usr/share/z/z.sh
