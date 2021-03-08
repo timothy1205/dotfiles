@@ -17,6 +17,8 @@ Plugin 'vhdirk/vim-cmake'
 Plugin 'pboettch/vim-cmake-syntax'
 Plugin 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'flazz/vim-colorschemes'
+"Requires arch package 'the_silver_searcher' for Ag
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -68,10 +70,12 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "ctrl + n to toggle 
 map <C-n> :NERDTreeToggle<CR>
 
+nnoremap <C-f> :Ag<CR>
+
 "enable rainbow parentheses
 let g:rainbow_active = 1
 
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-spell-checker', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight' ]
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
