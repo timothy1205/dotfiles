@@ -56,10 +56,9 @@ set background=dark
 colorscheme Atelier_DuneDark
 " Darker background/line number background
 " https://static.wikia.nocookie.net/vim/images/1/16/Xterm-color-table.png/revision/latest/scale-to-width-down/900?cb=20110121055231
-hi Normal ctermbg=Black
+hi Normal ctermbg=NONE 
 hi LineNr ctermbg=16
 hi PMenu ctermfg=147 ctermbg=16
-
 "control + h/j/k/l will move around the windows
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
