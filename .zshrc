@@ -69,3 +69,13 @@ function trizen () {
 export THEFUCK_EXCLUDE_RULES='fix_file'
 
 [[ -r "/usr/share/z/z.sh"  ]] && source /usr/share/z/z.sh
+
+
+function lxc-update-all () {
+  for CONTAINER in `lxc ls volatile.last_state.power=RUNNING -c n --format csv`;
+  do 
+    echo "lxc exec $CONTAINER -- '/usr/bin/pacman -Syu --noconfirm'"; 
+    lxc exec $CONTAINER --  /usr/bin/pacman -Syu --noconfirm;
+  done
+}
+
