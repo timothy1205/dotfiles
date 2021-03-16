@@ -44,7 +44,7 @@ tray-position = right
 
 [module/xwindow]
 type = internal/xwindow
-label = %title:0:75:...%
+label = %title:0:60:...%
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -315,7 +315,6 @@ ramp-capacity-2 = 
 ramp-capacity-foreground = ${colors.foreground-alt}
 
 animation-charging-0 = >
-animation-charging-1 = >>
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
