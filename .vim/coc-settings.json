@@ -6,7 +6,7 @@
     "text": "\u0000"
   },
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript", "typescript"
+    "javascript", "typescript", "php"
   ],
   "prettier.disableSuccessMessage": true
 }
