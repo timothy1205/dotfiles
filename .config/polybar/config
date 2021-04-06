@@ -73,7 +73,6 @@ type = internal/fs
 interval = 25
 
 mount-0 = /
-mount-1 = /alt
 
 format-underline = #f00
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
