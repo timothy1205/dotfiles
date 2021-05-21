@@ -90,20 +90,20 @@ super + {Up,Right,Down,Left}
 #
 
 # preselect the direction
-#alt + ctrl + {h,j,k,l} 
-#	bspc node -p {west,south,north,east}
+alt + ctrl + {h,j,k,l} 
+	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-#alt + ctrl + {1-9} 
-#	bspc node -o 0.{1-9}
+alt + ctrl + {1-9} 
+	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-#alt + ctrl + space 
-#	bspc node -p cancel
+alt + ctrl + space 
+	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-#alt + ctrl + shift + space 
-#	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+alt + ctrl + shift + space 
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize
@@ -145,3 +145,15 @@ super + p
 
 super + {_,shift +}o
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
+
+super + {_,shift +}v
+	virsh {start,shutdown} w10
+
+
+
+alt + shift + f
+	firefox
+
+alt + shift + p
+	firefox --private-window
+
