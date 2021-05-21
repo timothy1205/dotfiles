@@ -26,6 +26,9 @@ killall wal
 killall picom
 killall redshift
 killall nm-applet
+pkill -f discord
+killall spotify
+
 
 sxhkd &
 dunst &
@@ -33,6 +36,9 @@ wal -i "$WALLPAPER"
 picom &
 redshift &
 nm-applet &
+discord &
+$HOME/.local/bin/alt_discord &
+spotify &
 
 xset s off -dpms &
 xsetroot -cursor_name left_ptr &
@@ -79,5 +85,11 @@ bspc config normal_border_color "#000000"
 
 bspc config external_rules_command "$HOME/.config/bspwm/bspwm-external-rules"
 
-bspc rule -a discord desktop=^1
+bspc rule -a discord desktop=^1 follow=off
 bspc rule -a opengl_cursor_follower manage=off
+
+
+
+# Temp fix
+sleep 5s 
+systemctl --user restart pipewire-media-session.service
