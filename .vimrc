@@ -1,26 +1,25 @@
 set nocompatible
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'danilo-augusto/vim-afterglow'
-Plugin 'neoclide/coc.nvim'
-Plugin 'scrooloose/nerdtree'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'yggdroot/indentline'
-Plugin 'jiangmiao/auto-pairs'
-Plugin 'luochen1990/rainbow'
-Plugin 'vim-airline/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'vhdirk/vim-cmake'
-Plugin 'pboettch/vim-cmake-syntax'
-Plugin 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'flazz/vim-colorschemes'
+call plug#begin('~/.vim/plugged')
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'danilo-augusto/vim-afterglow'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'yggdroot/indentline'
+Plug 'jiangmiao/auto-pairs'
+Plug 'luochen1990/rainbow'
+Plug 'vim-airline/vim-airline'
+Plug 'tpope/vim-fugitive'
+Plug 'vhdirk/vim-cmake'
+Plug 'pboettch/vim-cmake-syntax'
+Plug 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
+Plug 'flazz/vim-colorschemes'
 "Requires arch package 'the_silver_searcher' for Ag
-Plugin 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim'
 
-call vundle#end()
+call plug#end()
+
 filetype plugin indent on
 
 
@@ -76,7 +75,7 @@ nnoremap <C-f> :Ag<CR>
 "enable rainbow parentheses
 let g:rainbow_active = 1
 
-let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight' ]
+let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight', 'coc-pyright' ]
 
 " use <tab> for trigger completion and navigate to the next complete item
 function! s:check_back_space() abort
