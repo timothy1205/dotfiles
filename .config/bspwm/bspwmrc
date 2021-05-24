@@ -86,10 +86,3 @@ bspc config normal_border_color "#000000"
 bspc config external_rules_command "$HOME/.config/bspwm/bspwm-external-rules"
 
 bspc rule -a discord desktop=^1 follow=off
-bspc rule -a opengl_cursor_follower manage=off
-
-
-
-# Temp fix
-sleep 5s 
-systemctl --user restart pipewire-media-session.service
