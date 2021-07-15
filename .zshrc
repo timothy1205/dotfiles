@@ -53,9 +53,9 @@ alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse
 # Cat fork w/ syntax highlighting
 alias cat='bat -pP'
 
-alias neofetch='fastfetch'
-
 alias cninja='cmake -G Ninja'
+
+alias ncdu='ncdu --color dark'
 
 function trizen () {
   if [ $# -eq 0 ]
