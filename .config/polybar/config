@@ -29,14 +29,18 @@ foreground = ${colors.foreground}
 
 font-0 = ${custom.font-0}
 
+modules-left = bspwm xwindow
+modules-right = pulseaudio spotify filesystem cpu temperature date
+
 wm-restack = bspwm
 
 
 [bar/bar]
 inherit = defaults
+height = 25
+offset-y = 0
+padding-right = 1
 
-modules-left = bspwm xwindow
-modules-right = pulseaudio spotify filesystem cpu temperature date
 tray-position = right
 
 [bar/simple]
@@ -44,9 +48,6 @@ inherit = defaults
 height = 25
 offset-y = 0
 padding-right = 1
-
-modules-left = bspwm
-modules-right = filesystem cpu temperature date
 
 [module/xwindow]
 type = internal/xwindow
@@ -336,7 +337,7 @@ animation-discharging-framerate = 750
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 60
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
+hwmon-path = ${env:HWMON_PATH} 
 ;hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input
 
 

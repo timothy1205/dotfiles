@@ -37,7 +37,7 @@ picom &
 redshift &
 nm-applet &
 discord &
-$HOME/.local/bin/alt_discord &
+#signal-desktop &
 spotify &
 
 xset s off -dpms &
@@ -59,10 +59,11 @@ if [[ $(hostname) == 'arch' ]]; then
 
 	# Polybar spacing
 	bspc config -m $MONITOR_LEFT top_padding 25
-	bspc config -m $MONITOR_MIDDLE top_padding 38
+	bspc config -m $MONITOR_MIDDLE top_padding 25
 	bspc config -m $MONITOR_RIGHT top_padding 25
 fi
 
+export HWMON_PATH=$(find /sys/devices/platform/coretemp.0 -name temp1_input)
 MONITOR=$MONITOR_LEFT polybar --reload simple &
 MONITOR=$MONITOR_MIDDLE polybar --reload bar &
 MONITOR=$MONITOR_RIGHT polybar --reload simple &
