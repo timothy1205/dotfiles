@@ -17,6 +17,8 @@ Plug 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
 Plug 'flazz/vim-colorschemes'
 "Requires arch package 'the_silver_searcher' for Ag
 Plug 'junegunn/fzf.vim'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -110,3 +112,7 @@ function! s:show_documentation()
 endfunction
 
 autocmd CursorHold * silent call CocActionAsync('highlight')
+
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=99
