@@ -14,11 +14,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'vhdirk/vim-cmake'
 Plug 'pboettch/vim-cmake-syntax'
 Plug 'instant-markdown/vim-instant-markdown', {'rtp': 'after'}
-Plug 'flazz/vim-colorschemes'
 "Requires arch package 'the_silver_searcher' for Ag
 Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vimwiki/vimwiki'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -54,17 +54,22 @@ set backspace=indent,eol,start
 syntax on
 set background=dark
 
-colorscheme Atelier_DuneDark
+colorscheme gruvbox
+"colorscheme Atelier_DuneDark
 " Darker background/line number background
 " https://static.wikia.nocookie.net/vim/images/1/16/Xterm-color-table.png/revision/latest/scale-to-width-down/900?cb=20110121055231
-hi Normal ctermbg=NONE 
-hi LineNr ctermbg=16
+"hi Normal ctermbg=NONE 
+"hi LineNr ctermbg=16
 hi PMenu ctermfg=147 ctermbg=16
 "control + h/j/k/l will move around the windows
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 nnoremap <C-H> <C-W>h
+
+"send to blackhole register by default
+nnoremap d "_d
+nnoremap x "_x
 
 "autoclose vim if only NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -76,6 +81,7 @@ nnoremap <C-f> :Ag<CR>
 
 "enable rainbow parentheses
 let g:rainbow_active = 1
+let g:rainbow_conf = { 'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', 'firebrick'] }
 
 let g:coc_global_extensions = [ 'coc-tsserver', 'coc-json', 'coc-prettier', 'coc-xml', 'coc-yaml', 'coc-java', 'coc-clangd', 'coc-css', 'coc-html', 'coc-cmake', 'coc-sh', 'coc-highlight', 'coc-pyright' ]
 
@@ -114,5 +120,5 @@ endfunction
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
 let g:indent_guides_enable_on_vim_startup = 1
-let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=99
+let g:indent_guides_auto_colors = 1
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=99
