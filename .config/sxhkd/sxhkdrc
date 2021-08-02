@@ -149,6 +149,18 @@ super + {_,shift +}o
 super + {_,shift +}v
 	virsh {start,shutdown} w10
 
+# XF86Audio stuff
+XF86Audio{LowerVolume,RaiseVolume}
+	pactl set-sink-volume 0 {-5%,+5%}
+
+XF86AudioMute
+	pactl set-sink-mute 0 toggle
+
+XF86Audio{Play,Pause}
+	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.PlayPause
+
+XF86Audio{Next,Prev}
+	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
 
 
 alt + shift + f
@@ -156,4 +168,5 @@ alt + shift + f
 
 alt + shift + p
 	firefox --private-window
+
 
