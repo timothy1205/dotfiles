@@ -26,7 +26,7 @@ killall wal
 killall picom
 killall redshift
 killall nm-applet
-pkill -f discord
+# pkill -f discord
 killall spotify
 
 
@@ -36,7 +36,7 @@ wal -i "$WALLPAPER"
 picom &
 redshift &
 nm-applet &
-discord &
+# discord &
 #signal-desktop &
 spotify &
 
