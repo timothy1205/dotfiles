@@ -31,6 +31,7 @@ set showbreak=+++
 set textwidth=100
 set showmatch	
 set visualbell	
+set relativenumber
  
 set hlsearch
 set smartcase	
@@ -50,6 +51,10 @@ set ruler
  
 set undolevels=1000	
 set backspace=indent,eol,start
+
+set scrolloff=5
+
+set encoding=utf-8
 
 syntax on
 set background=dark
@@ -71,6 +76,13 @@ nnoremap <C-H> <C-W>h
 "send to blackhole register by default
 nnoremap d "_d
 nnoremap x "_x
+
+nnoremap : ;
+nnoremap ; :
+
+" Swap ` and ' for marks
+nnoremap ' `
+nnoremap ` '
 
 "autoclose vim if only NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
