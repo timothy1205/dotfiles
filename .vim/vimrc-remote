@@ -1,3 +1,5 @@
+"curl -L https://raw.githubusercontent.com/timothy1205/dotfiles/master/.vim/vimrc-remote > ~/.vimrc
+
 set nocompatible
 filetype plugin indent on
 set number	
