@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+"test
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'danilo-augusto/vim-afterglow'
@@ -87,7 +88,7 @@ nnoremap ` '
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "ctrl + n to toggle 
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <C-f> :Ag<CR>
 
