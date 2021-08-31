@@ -52,14 +52,18 @@
 
 #element {
 	border: 0;
-	padding: 2px;
+	padding: 3px;
+}
+
+#element-text {
 	text-color: @highlight;
-	background-color: transparent;
 }
 
 #element.selected {
 	background-color: @highlight;
-	text-color: black;
-	highlight: bold;
 }
 
+#element-text.selected {
+	text-color: black;
+	highlight: bold underline;
+}
