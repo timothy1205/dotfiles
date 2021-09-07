@@ -59,15 +59,9 @@ super + ctrl + {m,x,y,z}
 #
 
 # focus the node in the given direction
-<<<<<<< HEAD
-alt + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east} --follow
-alt + {p,b,comma,period}
-=======
 super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east} --follow &>/dev/null
 super + {p,b,comma,period}
->>>>>>> cf81e09 (Move all alt keybinds to super)
 	bspc node -f @{parent,brother,first,second}
 
 # focus the next/previous node in the current desktop
@@ -140,7 +134,7 @@ super + ctrl + {Left,Down,Up,Right}
 
 
 # lock screen
-super + l
+super + m
 	xsecurelock
 
 
