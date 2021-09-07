@@ -134,7 +134,7 @@ super + ctrl + {Left,Down,Up,Right}
 
 
 # lock screen
-super + l
+super + m
 	xlock
 
 
