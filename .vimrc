@@ -20,6 +20,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
+Plug 'Stoozy/vimcord'
 
 call plug#end()
 
@@ -55,6 +56,8 @@ set backspace=indent,eol,start
 
 set scrolloff=5
 
+set guioptions-=L
+
 set encoding=utf-8
 
 syntax on
@@ -76,6 +79,10 @@ nnoremap <C-H> <C-W>h
 "send to blackhole register by default
 nnoremap d "_d
 nnoremap x "_x
+nnoremap <C-p> "0p
+
+"prevent pasting in visual mode from overriding default register
+xnoremap p pgvy
 
 nnoremap : ;
 nnoremap ; :

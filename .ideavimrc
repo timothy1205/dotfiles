@@ -1,0 +1,11 @@
+source ~/.vimrc
+
+nmap <silent> g[ 
+nmap <silent> g] 
+nmap <silent> gd
+nmap <silent> gy 
+nmap <silent> gi 
+nmap <silent> gr 
+
+nmap <leader>a 
+nmap <leader>r
