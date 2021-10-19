@@ -36,7 +36,6 @@ wal -i "$WALLPAPER"
 picom &
 redshift &
 nm-applet &
-# discord &
 #signal-desktop &
 spotify &
 
@@ -87,3 +86,11 @@ bspc config normal_border_color "#000000"
 bspc config external_rules_command "$HOME/.config/bspwm/bspwm-external-rules"
 
 bspc rule -a discord desktop=^1 follow=off
+
+# Start xlock if it's 9 AM (when WOL is triggered)
+if [ $(date +%H) -eq 09  ]; then
+        # Sleep to give xorg a moment to initialize
+        sleep 3s && xlock &
+else
+        discord &
+fi
