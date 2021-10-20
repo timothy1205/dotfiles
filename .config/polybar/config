@@ -29,7 +29,7 @@ foreground = ${colors.foreground}
 
 font-0 = ${custom.font-0}
 
-modules-left = bspwm xwindow
+modules-left = bspwm xwindow pacman
 modules-right = pulseaudio spotify filesystem cpu temperature date
 
 wm-restack = bspwm
@@ -400,6 +400,12 @@ interval = 1
 format = <label>
 exec = python $HOME/.config/polybar/spotify_status.py -f '{song}' -t 24
 format-underline = #1db954
+
+[module/pacman]
+type = custom/script
+interval = 1
+exec = $HOME/.config/polybar/pacman-script.sh
+format-underline = #FF0000
 
 [module/netspeed]
 type = custom/script
