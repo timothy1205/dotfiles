@@ -38,7 +38,7 @@ height = 25
 offset-y = 0
 padding-right = 1
 
-modules-left = bspwm xwindow
+modules-left = bspwm xwindow pacman
 modules-right = pulseaudio spotify filesystem cpu battery date
 tray-position = right
 
@@ -387,6 +387,12 @@ interval = 1
 format = <label>
 exec = python $HOME/.config/polybar/spotify_status.py -f '{song}' -t 24
 format-underline = #1db954
+
+[module/pacman]
+type = custom/script
+interval = 1
+exec = $HOME/.config/polybar/pacman-script.sh
+format-underline = #FF0000
 
 [module/netspeed]
 type = custom/script
