@@ -91,6 +91,9 @@ nnoremap ; :
 nnoremap ' `
 nnoremap ` '
 
+" Search and replace highlighted text (visual mode)
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
+
 "autoclose vim if only NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
