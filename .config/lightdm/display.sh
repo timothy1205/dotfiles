@@ -18,3 +18,4 @@ else
   --output HDMI-1 --primary --mode 2560x1440 --pos 2560x0 --rotate normal --rate 120
 fi
 
+xrandr --dpi 100
