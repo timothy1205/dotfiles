@@ -72,10 +72,42 @@ export THEFUCK_EXCLUDE_RULES='fix_file'
 
 
 function lxc-update-all () {
-  for CONTAINER in `lxc ls volatile.last_state.power=RUNNING -c n --format csv`;
-  do 
-    echo "lxc exec $CONTAINER -- '/usr/bin/pacman -Syu --noconfirm'"; 
-    lxc exec $CONTAINER --  /usr/bin/pacman -Syu --noconfirm;
+  for remote_line in `lxc remote ls --format csv`;
+  do
+    if [ $(echo $remote_line | cut -d',' -f3) != 'lxd' ]; then
+      continue
+    fi
+
+    remote=$(echo $remote_line | cut -d',' -f1)
+    if [ $remote = '(current)' ]; then
+      remote='local'
+    fi
+
+    for container in `lxc ls $remote: volatile.last_state.power=RUNNING -c n --format csv`;
+    do 
+      echo "\n\n===========================
+  updating $remote:$container
+===========================\n\n"
+      lxc exec $remote:$container -- sh -c "if [ -f /usr/bin/pacman ]; then /usr/bin/pacman -Syu --noconfirm; elif [ -f /usr/bin/apt-get ]; then /usr/bin/apt-get update && /usr/bin/apt-get upgrade -y; fi"; 
+    done
   done
 }
 
+function lxc-restart-all () {
+  for remote_line in `lxc remote ls --format csv`;
+  do
+    if [ $(echo $remote_line | cut -d',' -f3) != 'lxd' ]; then
+      continue
+    fi
+
+    remote=$(echo $remote_line | cut -d',' -f1)
+    if [ $remote = '(current)' ]; then
+      remote='local'
+    fi
+
+    echo "Restarting $remote containers..."
+    lxc restart $remote: --all
+  done
+}
+
+source /usr/share/nvm/init-nvm.sh
