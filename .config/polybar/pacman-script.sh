@@ -1,6 +1,6 @@
 #!/bin/bash
 
-INTERVAL_SECONDS=300 # Update every 5 minutes
+INTERVAL_SECONDS=3600 # Update every hour
 TEMP_FILE="/tmp/pacman-script"
 UPDATE_COUNT=0
 CURRENT_TIME=$(date +%s)
