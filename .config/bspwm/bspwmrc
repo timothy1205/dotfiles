@@ -90,7 +90,7 @@ bspc rule -a discord desktop=^1 follow=off
 # Start xlock if it's 9 AM (when WOL is triggered)
 if [ $(date +%H) -eq 09  ]; then
         # Sleep to give xorg a moment to initialize
-        sleep 3s && xlock &
+        sleep 5s && xlock &
 else
         discord &
 fi
