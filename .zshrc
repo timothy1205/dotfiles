@@ -61,6 +61,7 @@ function trizen () {
   if [ $# -eq 0 ]
   then
     /usr/bin/trizen -Syu
+    /usr/bin/flatpak update
   else
     /usr/bin/trizen "$@"
   fi
