@@ -1,2 +1,0 @@
-#!/bin/bash
-XDG_CONFIG_HOME=~/.alt_config /usr/bin/discord
