@@ -45,7 +45,7 @@ if  xset -q &>/dev/null; then
 fi
 
 # Defualt editor
-export VISUAL='vim'
+export VISUAL='emacs -nw'
 export EDITOR="$VISUAL"
 
 alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
