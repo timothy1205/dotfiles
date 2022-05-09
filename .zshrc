@@ -45,7 +45,7 @@ if  xset -q &>/dev/null; then
 fi
 
 # Defualt editor
-export VISUAL=vim
+export VISUAL='vim'
 export EDITOR="$VISUAL"
 
 alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
@@ -63,15 +63,20 @@ alias airplane-off='sudo rfkill unblock all'
 
 alias cninja='cmake -G Ninja'
 
-function trizen () {
+# Default to command line mode when ran in terminal
+alias emacs='emacs -nw'
+
+function paru () {
   if [ $# -eq 0 ]
   then
-    /usr/bin/trizen -Syu
+    /usr/bin/paru
+    /usr/bin/flatpak update
   else
-    /usr/bin/trizen "$@"
+    /usr/bin/paru "$@"
   fi
 }
 
 export THEFUCK_EXCLUDE_RULES='fix_file'
 
 [[ -r "/usr/share/z/z.sh"  ]] && source /usr/share/z/z.sh
+
