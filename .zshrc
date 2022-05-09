@@ -45,7 +45,7 @@ if  xset -q &>/dev/null; then
 fi
 
 # Defualt editor
-export VISUAL=vim
+export VISUAL='vim'
 export EDITOR="$VISUAL"
 
 alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
@@ -57,13 +57,16 @@ alias cninja='cmake -G Ninja'
 
 alias ncdu='ncdu --color dark'
 
-function trizen () {
+# Default to command line mode when ran in terminal
+alias emacs='emacs -nw'
+
+function paru () {
   if [ $# -eq 0 ]
   then
-    /usr/bin/trizen -Syu
+    /usr/bin/paru
     /usr/bin/flatpak update
   else
-    /usr/bin/trizen "$@"
+    /usr/bin/paru "$@"
   fi
 }
 
@@ -108,6 +111,28 @@ function lxc-restart-all () {
 
     echo "Restarting $remote containers..."
     lxc restart $remote: --all
+  done
+}
+
+function lxc-run-all () {
+  for remote_line in `lxc remote ls --format csv`;
+  do
+    if [ $(echo $remote_line | cut -d',' -f3) != 'lxd' ]; then
+      continue
+    fi
+
+    remote=$(echo $remote_line | cut -d',' -f1)
+    if [ $remote = '(current)' ]; then
+      remote='local'
+    fi
+
+    for container in `lxc ls $remote: volatile.last_state.power=RUNNING -c n --format csv`;
+    do 
+      echo "\n\n===========================
+  [$remote:$container] $@
+===========================\n\n"
+      lxc exec $remote:$container -- "$@"; 
+    done
   done
 }
 
