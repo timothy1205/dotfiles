@@ -61,12 +61,11 @@ alias ncdu='ncdu --color dark'
 alias emacs='emacs -nw'
 
 function paru () {
+  /usr/bin/paru "$@"
+
   if [ $# -eq 0 ]
   then
-    /usr/bin/paru
     /usr/bin/flatpak update
-  else
-    /usr/bin/paru "$@"
   fi
 }
 
