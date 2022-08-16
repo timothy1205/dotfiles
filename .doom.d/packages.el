@@ -50,4 +50,4 @@
 ;(unpin! t)
 
 (package! evil-tutor)
-(package! key-chord)
+(package! dockerfile-mode)
