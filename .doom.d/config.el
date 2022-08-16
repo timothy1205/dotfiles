@@ -6,8 +6,6 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
 ;;
@@ -75,11 +73,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
-(require 'key-chord)
-(setq key-chord-two-keys-delay 0.5)
-(key-chord-define evil-insert-state-map "cc" 'evil-normal-state)
-(key-chord-mode 1)
-
 
 ;; Disable confirm quit
 (setq confirm-kill-emacs nil)
+
+(load! "projects")
+
+(setq lsp-rust-analyzer-server-display-inlay-hints t)
