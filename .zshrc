@@ -65,7 +65,7 @@ function paru () {
 
   if [ $# -eq 0 ]
   then
-    /usr/bin/flatpak update
+    /usr/bin/sudo /usr/bin/flatpak update
   fi
 }
 
