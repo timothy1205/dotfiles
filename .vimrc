@@ -20,7 +20,6 @@ Plug 'junegunn/fzf.vim'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'vimwiki/vimwiki'
 Plug 'morhetz/gruvbox'
-Plug 'Stoozy/vimcord'
 
 call plug#end()
 
