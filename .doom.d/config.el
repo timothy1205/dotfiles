@@ -80,3 +80,5 @@
 (load! "projects")
 
 (setq lsp-rust-analyzer-server-display-inlay-hints t)
+
+(setq doom-font (font-spec :family "Hack" :size 15.0))
