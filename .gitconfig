@@ -5,3 +5,5 @@
 	rebase = false
 [color]
 	ui = auto
+[safe]
+	directory = /opt/lampp/htdocs/lpmj6
