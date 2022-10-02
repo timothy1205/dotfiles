@@ -1,6 +1,6 @@
 #! /bin/sh
 
-export WALLPAPER="$HOME/.config/bspwm/wallpapers/space3.jpg"
+export WALLPAPER="$HOME/.config/bspwm/wallpapers/cyberpunk-1.jpg"
 
 # Monitors
 
@@ -19,6 +19,7 @@ killall nm-applet
 sxhkd &
 dunst &
 wal -i "$WALLPAPER"
+wal-polybar
 picom &
 redshift &
 nm-applet &
