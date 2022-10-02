@@ -1,12 +1,11 @@
 [colors]
-background = #1a1a1a
-;background = #aa1a1a1a
-background-alt = #333
-foreground = #913852
-foreground-alt = #FFF
-primary = #C75477
-secondary = #e60053
-alert = #bd2c40
+background = ${wal.color0}
+background-alt = ${wal.color8}
+foreground = ${wal.color7}
+foreground-alt = ${wal.color7}
+primary = ${wal.color1}
+secondary = ${wal.color2}
+alert = ${wal.color3}
 
 [custom]
 offset-y = 8
@@ -23,9 +22,6 @@ module-margin = 1
 line-size = 1
 
 override-redirect = true
-
-background = ${colors.background}
-foreground = ${colors.foreground}
 
 font-0 = ${custom.font-0}
 

@@ -27,7 +27,7 @@ else
 fi
 
 if [ $UPDATE_COUNT -gt 0 ]; then
-  echo "Pacman Updates: $UPDATE_COUNT"
+  echo "%{F#999}Pacman Updates: %{F#a00}$UPDATE_COUNT"
 else
   echo ""
 fi
