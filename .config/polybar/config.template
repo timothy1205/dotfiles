@@ -41,6 +41,8 @@ tray-position = right
 [module/xwindow]
 type = internal/xwindow
 label = %title:0:60:...%
+format = <label>
+format-foreground = ${colors.secondary}
 
 [module/xkeyboard]
 type = internal/xkeyboard
@@ -64,8 +66,10 @@ interval = 25
 
 mount-0 = /
 
-format-underline = #f00
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted-underline = ${colors.alert}
+label-mounted = %mountpoint%: %{F999}%percentage_used%%
+label-mounted-foreground = ${colors.secondary}
+
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -74,11 +78,13 @@ type = internal/bspwm
 
 label-focused = %index%
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
+label-focused-underline= ${colors.secondary}
+label-focused-foreground = ${colors.secondary}
 label-focused-padding = 2
 
 label-occupied = %index%
 label-occupied-padding = 2
+label-occupied-foreground = ${colors.primary}
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
@@ -167,9 +173,8 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
+format-underline = ${colors.primary}
+format-foreground = ${colors.secondary}
 label = CPU%percentage:2%% 
 
 [module/memory]
@@ -228,9 +233,8 @@ date-alt = " %Y-%m-%d"
 time = %I:%M:%S
 time-alt = %H:%M:%S
 
-;format-prefix = 
-format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
+format-foreground = ${colors.secondary}
 
 label = %date% %time%
 
@@ -239,7 +243,7 @@ type = internal/pulseaudio
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL %percentage%%
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.secondary}
 
 label-muted = muted
 label-muted-foreground = #666
@@ -266,7 +270,7 @@ type = internal/alsa
 
 format-volume = <label-volume> <bar-volume>
 label-volume = VOL
-label-volume-foreground = ${root.foreground}
+label-volume-foreground = ${colors.foreground}
 
 format-muted-prefix = " "
 format-muted-foreground = ${colors.foreground-alt}
@@ -330,8 +334,9 @@ format-warn = <label-warn>
 format-warn-underline = ${self.format-underline}
 
 label = %temperature-c%
+label-foreground = ${colors.secondary}
 label-warn = %temperature-c%
-label-warn-foreground = ${colors.secondary}
+label-warn-foreground = ${colors.foreground-alt}
 
 ramp-foreground = ${colors.foreground-alt}
 
@@ -382,13 +387,14 @@ interval = 1
 ;format-prefix = 
 format = <label>
 exec = python $HOME/.config/polybar/spotify_status.py -f '{song}' -t 24
-format-underline = #1db954
+format-underline = ${colors.foreground}
+format-foreground = ${colors.secondary}
 
 [module/pacman]
 type = custom/script
 interval = 1
 exec = $HOME/.config/polybar/pacman-script.sh
-format-underline = #FF0000
+format-underline = ${colors.alert}
 
 [module/netspeed]
 type = custom/script
