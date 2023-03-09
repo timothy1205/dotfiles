@@ -161,3 +161,18 @@ XF86Audio{Play,Pause}
 
 XF86Audio{Next,Prev}
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
+
+
+
+# app keybinds
+super + shift + f
+	firefox
+
+super + shift + k
+	keepassxc
+
+super + shift + d
+	com.discordapp.Discord
+
+super + shift + e
+	emacs
