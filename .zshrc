@@ -66,6 +66,8 @@ alias cninja='cmake -G Ninja'
 # Default to command line mode when ran in terminal
 alias emacs='emacs -nw'
 
+alias rlsollya='rlwrap sollya'
+
 function paru () {
   /usr/bin/paru "$@"
 
