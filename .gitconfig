@@ -7,3 +7,5 @@
 	ui = auto
 [safe]
 	directory = /opt/lampp/htdocs/lpmj6
+[init]
+	defaultBranch = main
