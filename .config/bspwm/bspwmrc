@@ -23,6 +23,7 @@ wal-polybar
 picom &
 redshift &
 nm-applet &
+kdeconnect-indicator &
 
 xset s off -dpms &
 xsetroot -cursor_name left_ptr &
