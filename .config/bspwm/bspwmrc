@@ -39,6 +39,7 @@ redshift &
 nm-applet &
 #signal-desktop &
 spotify &
+kdeconnect-indicator &
 
 xset s off -dpms &
 xsetroot -cursor_name left_ptr &
@@ -92,7 +93,7 @@ bspc rule -a discord desktop=^1 follow=off ignore_ewmh_focus=on
 bspc rule -a Emacs state=tiled
 
 # Start xlock if it's 9 AM (when WOL is triggered)
-if [ $(date +%H) -eq 09  ]; then
+if [ $(date +%H) -le 09  ]; then
         # Sleep to give xorg a moment to initialize
         sleep 5s && xlock &
 else
