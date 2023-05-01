@@ -78,3 +78,6 @@
 (setq confirm-kill-emacs nil)
 
 (setq doom-font (font-spec :family "Hack" :size 15.0))
+
+(setq python-indent-offset 4)
+(setq python-indent-guess-indent-offset nil)
