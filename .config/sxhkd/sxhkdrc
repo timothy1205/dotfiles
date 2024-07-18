@@ -7,7 +7,7 @@ super + Return
 	alacritty
 
 # program launcher
-super + d
+super + space
 	rofi -show run 
 
 # window switcher
@@ -146,8 +146,8 @@ super + p
 super + {_,shift +}o
 	dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.{Next,Previous}
 
-super + {_,shift +}v
-	virsh {start,shutdown} w10
+#super + {_,shift +}v
+#	virsh {start,shutdown} gaming
 
 # XF86Audio stuff
 XF86Audio{LowerVolume,RaiseVolume}

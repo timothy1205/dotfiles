@@ -48,7 +48,8 @@ fi
 export VISUAL='emacs -nw'
 export EDITOR="$VISUAL"
 
-alias pacmanbrowse="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias pacmanbrowsedep="pacman -Qq | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
+alias pacmanbrowse="pacman -Qqt | fzf --preview 'pacman -Qil {}' --layout=reverse --bind 'enter:execute(pacman -Qil {} | less)'"
 
 # Cat fork w/ syntax highlighting
 alias cat='bat -pP'
@@ -62,12 +63,18 @@ alias emacs='emacs -nw'
 
 alias rlsollya='rlwrap sollya'
 
+alias kayla="systemctl --user start combine-pulse.service && echo 'Kayla mode: \033[0;32mActivated'"
+alias nokayla="systemctl --user stop combine-pulse.service && echo 'Kayla mode: \033[0;31mDeactivated'"
+
 function paru () {
   /usr/bin/paru "$@"
 
   if [ $# -eq 0 ]
   then
-    /usr/bin/flatpak update -y
+    /usr/bin/paru 
+    /usr/bin/flatpak update -y 
+  else
+    /usr/bin/paru "$@"
   fi
 }
 
@@ -137,4 +144,22 @@ function lxc-run-all () {
   done
 }
 
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] 2>/dev/null ))
+}
+compctl -K _pip_completion pip3
+# pip zsh completion end
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+
+export DOCKER_HOST=unix://$XDG_RUNTIME_DIR/docker.sock
 source /usr/share/nvm/init-nvm.sh
