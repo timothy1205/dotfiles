@@ -41,10 +41,11 @@ vim.keymap.set(
     "oif err != nil {<CR>}<Esc>Oreturn err<Esc>"
 )
 
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+vim.keymap.set('t', '<C-Space>', [[<C-\><C-n>]], { noremap = true, silent = true })
 
