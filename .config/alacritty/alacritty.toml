@@ -1,0 +1,42 @@
+import = ["~/.config/alacritty/cyberdream.toml"]
+
+[font]
+size = 15.0
+
+[font.bold]
+family = "Hack"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack"
+style = "Italic"
+
+[font.normal]
+family = "Hack"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+decorations = "Full"
+opacity = 1
+startup_mode = "Maximized"
+
+[window.padding]
+x = 0
+y = 0

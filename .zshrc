@@ -36,7 +36,7 @@ alias dfd='dotfiles diff'
 
 
 # Pywal, apply theme
-(cat ~/.cache/wal/sequences &)
+#(cat ~/.cache/wal/sequences &)
 
 # Java hack
 if  xset -q &>/dev/null; then
@@ -71,8 +71,8 @@ function paru () {
 
   if [ $# -eq 0 ]
   then
-    /usr/bin/paru 
-    /usr/bin/flatpak update -y 
+    /usr/bin/paru
+    /usr/bin/flatpak update -y
   else
     /usr/bin/paru "$@"
   fi
@@ -96,11 +96,11 @@ function lxc-update-all () {
     fi
 
     for container in `lxc ls $remote: volatile.last_state.power=RUNNING -c n --format csv`;
-    do 
+    do
       echo "\n\n===========================
   updating $remote:$container
 ===========================\n\n"
-      lxc exec $remote:$container -- sh -c "if [ -f /usr/bin/pacman ]; then /usr/bin/pacman -Syu --noconfirm; elif [ -f /usr/bin/apt-get ]; then /usr/bin/apt-get update && /usr/bin/apt-get upgrade -y; fi"; 
+      lxc exec $remote:$container -- sh -c "if [ -f /usr/bin/pacman ]; then /usr/bin/pacman -Syu --noconfirm; elif [ -f /usr/bin/apt-get ]; then /usr/bin/apt-get update && /usr/bin/apt-get upgrade -y; fi";
     done
   done
 }
@@ -135,11 +135,11 @@ function lxc-run-all () {
     fi
 
     for container in `lxc ls $remote: volatile.last_state.power=RUNNING -c n --format csv`;
-    do 
+    do
       echo "\n\n===========================
   [$remote:$container] $@
 ===========================\n\n"
-      lxc exec $remote:$container -- "$@"; 
+      lxc exec $remote:$container -- "$@";
     done
   done
 }
